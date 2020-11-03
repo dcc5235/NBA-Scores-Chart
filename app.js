@@ -97,6 +97,9 @@ for(let game of warriorsGames){
   } else {
     scoreLine = `${aPoints}-<b>${hPoints}</b>`;
   }
+  const warriors = hTeam === 'Golden State' ? homeTeam : awayTeam;
+  gameLi.classList.add(warriors.isWinner ? 'win':'loss');
+
   gameLi.innerHTML = `${teamNames} ${scoreLine}`;
   console.log(scoreLine)
   ulParent.appendChild(gameLi);
